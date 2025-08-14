@@ -1,12 +1,9 @@
-import DatePick from "./datePick";
-import RewardCount from "./rewardCount";
-import "./app.css";
+import Map from "./Map";
 
 function App() {
   return (
-    <div className="app-row">
-      <DatePick/> 
-      <RewardCount/>
+    <div>
+      <Map />
     </div>
   );
 }
