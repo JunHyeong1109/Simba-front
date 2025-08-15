@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './rewardCountStyle.css';
+import './SelectStyle.css';
 
-function RewardCount() {
+function SelectShop() {
   const [selectedValue, setSelectedValue] = useState(""); // 초기값: placeholder
 
   const options = [
@@ -25,13 +25,13 @@ function RewardCount() {
   };
 
   return (
-    <div className='reward-row'>
+    <div>
       <select
-        className={`reward-input ${selectedValue === "" ? "is-placeholder" : ""}`}
+        className={`select-input ${selectedValue === "" ? "is-placeholder" : ""}`}
         value={selectedValue}
         onChange={handleChange}
       >
-        <option value="" disabled hidden>보상 수량</option>
+        <option value="" disabled hidden>매장 선택</option>
         {options.map(o => (
           <option key={o.value} value={o.value}>{o.label}</option>
         ))}
@@ -40,4 +40,4 @@ function RewardCount() {
   );
 }
 
-export default RewardCount;
+export default SelectShop;
